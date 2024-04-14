@@ -1,0 +1,39 @@
+{
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": "A Simple Weather App",
+    "main": "./backend/app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node ./backend/app.js",
+        "build": "npx webpack --config webpack.config.js",
+        "build-watch": "webpack --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["Weather App", "OpenWeatherMap", "Express.JS", "Node.JS"],
+    "author": "Ankit Dutta",
+    "license": "GPL-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/codingankit/weather-app.git"
+    },
+    "bugs": {
+        "url": "https://github.com/codingankit/weather-app/issues"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "node-fetch": "^3.3.2"
+    },
+    "devDependencies": {
+        "css-loader": "^7.1.0",
+        "html-webpack-plugin": "^5.6.0",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.91.0",
+        "webpack-cli": "^5.1.4"
+    },
+    "engines": {
+        "node": "20.x"
+    }
+}

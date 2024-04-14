@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <!-- Link to Weather Icons CSS file -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"
+        />
+        <!-- Link to Material Icons font -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Wrapper div for the entire content -->
+        <div id="wrapper">
+            <!-- Search bar and button -->
+            <div id="searchDiv">
+                <input
+                    type="search"
+                    id="searchBox"
+                    placeholder="Search By City"
+                />
+                <button id="searchBtn">
+                    <span class="material-icons">search</span>
+                </button>
+            </div>
+
+            <!-- Main content to display weather information -->
+            <div id="mainContent">
+                <h2 id="cityName"></h2>
+                <h3 id="cityTemp"></h3>
+                <div id="weatherDescriptionDiv">
+                    <p>
+                        <!-- Weather icon will be displayed here -->
+                        <i class="wi" id="weatherIcon"></i>
+                        <!-- Weather description will be displayed here -->
+                        <span id="weatherDescription"></span>
+                    </p>
+                </div>
+                <div id="sideInfoDiv">
+                    <h5>
+                        <!-- Humidity information will be displayed here -->
+                        <span class="hu">Humidity</span> :
+                        <span id="humidity" class="hu"></span>
+                    </h5>
+                    <h5>
+                        <!-- Wind speed information will be displayed here -->
+                        <span class="ws">Wind Speed</span> :
+                        <span id="windSpeed" class="ws"></span>
+                    </h5>
+                </div>
+            </div>
+
+            <!-- Loader div to show loading animation -->
+            <div id="loaderDiv">
+                <div class="custom-loader"></div>
+            </div>
+
+            <!-- Initial text div to display initial text before weather data is loaded -->
+            <div id="initialTextDiv" style="">
+                <h3 id="initialText">Weather App</h3>
+                <h1 id="initialTextDesign">...</h1>
+            </div>
+
+            <!-- Error div to display any errors that occur during data fetching -->
+            <div id="errDiv" style="">
+                <h3 id="errText"></h3>
+            </div>
+        </div>
+    </body>
+</html>

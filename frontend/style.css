@@ -1,0 +1,203 @@
+/* Import the Dosis font from Google Fonts */
+@import "https://fonts.googleapis.com/css2?family=Dosis&display=swap";
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif; /* Use the Dosis font for all text */
+}
+
+body {
+    background: #2e3131; /* Set the background color for the body */
+}
+
+/* Wrapper styles */
+#wrapper {
+    color: #fff; /* Set text color to white */
+    width: 95%; /* Set width to 95% of the viewport */
+    position: absolute; /* Position the wrapper absolutely */
+    top: 50%; /* Position the wrapper 50% from the top */
+    left: 50%; /* Position the wrapper 50% from the left */
+    transform: translate(
+        -50%,
+        -50%
+    ); /* Center the wrapper horizontally and vertically */
+    padding: 15px; /* Add padding */
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    border-radius: 8px; /* Add border radius */
+}
+
+/* Search box and button styles */
+#searchBox {
+    width: 85%; /* Set the width of the search box */
+    padding: 12px 15px; /* Add padding */
+    border-radius: 55px; /* Add border radius */
+    border: none; /* Remove border */
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    color: #fff; /* Set text color to white */
+}
+
+#searchBox:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+#searchBtn {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    border: none; /* Remove border */
+    padding: 5px; /* Add padding */
+    height: 42px; /* Set height */
+    width: 42px; /* Set width */
+    border-radius: 50%; /* Make the button round */
+    text-align: center; /* Center text horizontally */
+    line-height: 45px; /* Set line height */
+    vertical-align: middle; /* Align vertically in the middle */
+    color: #fff; /* Set text color to white */
+}
+
+#searchBtn:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* General text styles */
+span {
+    color: #fff; /* Set text color to white */
+    margin: 4.2px; /* Add margin */
+}
+
+#mainContent {
+    display: none; /* Hide the main content by default */
+}
+
+/* Weather icon styles */
+#weatherIcon {
+    font-size: 28px; /* Set font size */
+}
+
+/* City name styles */
+#cityName {
+    margin: 20px 0 0 10px; /* Set margin */
+    color: #00a6a6; /* Set text color */
+}
+
+/* City temperature styles */
+#cityTemp {
+    margin: 15px 0 0 17px; /* Set margin */
+    color: #fc9e4f; /* Set text color */
+}
+
+/* Weather description styles */
+#weatherDescriptionDiv {
+    margin: 15px 0 0 17px; /* Set margin */
+}
+
+#weatherDescription {
+    margin-left: 14px; /* Add left margin */
+    text-transform: capitalize; /* Capitalize text */
+    font-weight: bold; /* Set font weight to bold */
+    color: dodgerblue; /* Set text color */
+}
+
+/* Weather icon styles */
+#weatherIcon {
+    display: inline; /* Display the icon as inline */
+    color: #cb48b7; /* Set icon color */
+}
+
+/* Side info styles */
+#sideInfoDiv {
+    margin: 26px 0 0 17px; /* Set margin */
+}
+
+.hu {
+    color: #7cc6fe; /* Set text color */
+}
+
+.ws {
+    color: #8377d1; /* Set text color */
+}
+
+/* Initial text styles */
+#initialText {
+    text-align: center; /* Center text horizontally */
+    color: #28afb0; /* Set text color */
+}
+
+#initialTextDesign {
+    text-align: center; /* Center text horizontally */
+    color: #28afb0; /* Set text color */
+    letter-spacing: 8px; /* Add letter spacing */
+}
+
+#initialTextDiv {
+    margin: 30px 0 15px 0; /* Set margin */
+}
+
+/* Loader styles */
+#loaderDiv {
+    height: 100px; /* Set height */
+    margin-top: 5px; /* Set top margin */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    display: none; /* Hide loader by default */
+}
+
+/* Custom loader styles */
+#loaderDiv div.custom-loader {
+    width: 6px; /* Set width */
+    height: 6px; /* Set height */
+    background: #28afb0; /* Set background color */
+    border-radius: 50%; /* Make it round */
+    box-shadow:
+        20px 0 #ced9e422,
+        /* Add horizontal shadow */ -20px 0 #28afb0; /* Add horizontal shadow */
+    animation: d5 1s infinite linear alternate; /* Apply animation */
+}
+
+/* Error message styles */
+#errDiv {
+    margin: 30px 0 15px 0; /* Set margin */
+    display: none; /* Hide error message by default */
+}
+
+#errText {
+    text-align: center; /* Center text horizontally */
+    color: #d2527f; /* Set text color */
+}
+
+/* Additional styles */
+#sideInfoDiv > h5 {
+    margin-bottom: 4px; /* Set bottom margin */
+}
+
+/* Hide search box decoration */
+#searchBox::-webkit-search-decoration,
+#searchBox::-webkit-search-cancel-button,
+#searchBox::-webkit-search-results-button,
+#searchBox::-webkit-search-results-decoration {
+    display: none; /* Hide decoration elements */
+}
+
+/* Animation keyframes */
+@keyframes d5 {
+    0% {
+        box-shadow:
+            20px 0 #28afb0,
+            -20px 0 #ced9e422; /* Set initial box shadow */
+        background: #28afb0; /* Set initial background color */
+    }
+    33% {
+        box-shadow:
+            20px 0 #28afb0,
+            -20px 0 #ced9e422; /* Change box shadow */
+        background: #ced9e422; /* Change background color */
+    }
+    66% {
+        box-shadow:
+            20px 0 #ced9e422,
+            -20px 0 #28afb0; /* Change box shadow */
+        background: #ced9e422; /* Change background color */
+    }
+}
